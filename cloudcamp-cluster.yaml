@@ -1,0 +1,82 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: cloudcamp-eks-cluster
+  region: us-east-1
+  version: "1.25"
+vpc:
+  id: "vpc-08f9cdf8d36e48a48"
+  subnets:
+    public:
+      pub-us-east-1a:
+        id: "subnet-09a074779c18ff743"
+      pub-us-east-1b:
+        id: "subnet-0fb31fb16af610114"
+      pub-us-east-1c:
+        id: "subnet-0a99b1b0714269d6a"
+    private:
+      priv0-us-east-1a: 
+        id: "subnet-0b308209c5695bf3b"
+      priv0-us-east-1b: 
+        id: "subnet-0dc29ca8e8134daa7"
+      priv0-us-east-1c: 
+        id: "subnet-03015c0ae9adb98f8"
+      priv1-us-east-1a: 
+        id: "subnet-0656e14a67ffe653d"
+      priv1-us-east-1b: 
+        id: "subnet-0e99a3a5a9299615a"
+      priv1-us-east-1c: 
+        id: "subnet-0845dca73f191f6be"
+managedNodeGroups:
+  - name: cloudcamp-dev-ng-1
+    ami: ami-02759925ad596a5f9
+    amiFamily: AmazonLinux2
+    overrideBootstrapCommand: |
+      #!/bin/bash
+      /etc/eks/bootstrap.sh agosto-eks-cluster
+    instanceType: t3a.small
+    spot: true
+    minSize: 1
+    maxSize: 5
+    desiredCapacity: 3
+    volumeSize: 20
+    volumeEncrypted: true
+    volumeType: gp3
+    privateNetworking: true
+    subnets:
+      - priv0-us-east-1a
+      - priv0-us-east-1b
+      - priv0-us-east-1c
+      - priv1-us-east-1a
+      - priv1-us-east-1b
+      - priv1-us-east-1c
+    labels: {role: dev}
+    ssh:
+      publicKeyName: agosto-demo
+    tags:
+      Env: Dev
+    iam:
+      attachPolicyARNs:
+        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+        - arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess
+        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+        - arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
+      withAddonPolicies:
+        autoScaler: true
+iam:
+  withOIDC: true
+
+addons:
+- name: vpc-cni
+  attachPolicyARNs:
+    - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+  resolveConflicts: overwrite
+- name: coredns
+  version: v1.9.3-eksbuild.5
+  configurationValues: |-
+    replicaCount: 2
+  resolveConflicts: overwrite
+- name: kube-proxy
+  version: v1.25.11-minimal-eksbuild.2
+  resolveConflicts: overwrite
