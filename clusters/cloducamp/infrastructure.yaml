@@ -13,9 +13,3 @@ spec:
   prune: true
   wait: true
   timeout: 5m
-  dependsOn:
-    - name: external-config-data
-  postBuild:
-    substituteFrom:
-      - kind: ConfigMap
-        name: external-config-data
