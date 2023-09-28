@@ -5,26 +5,24 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: aws-load-balancer-controller
-  serviceAccountName: aws-load-balancer-controller
+  serviceAccountName: helm-controller
   targetNamespace: kube-system
-  interval: 1m
   chart:
     spec:
       chart: aws-load-balancer-controller
-      #version: 2.3.0
+      version: 1.6.1
       sourceRef:
         kind: HelmRepository
         name: eks-charts
         namespace: flux-system
+  interval: 2m
   install:
-    remediation:
-      retries: 3
+    crds: CreateReplace
   upgrade:
-    remediation:
-      retries: 3
+    crds: CreateReplace
   values:
     # values replaced with values on ConfigMap external-config-data
-    #serviceAccount:
-    #  annotations:
-    #    eks.amazonaws.com/role-arn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRole2
+    serviceAccount:
+      annotations:
+        eks.amazonaws.com/role-arn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRole
     clusterName: vcc-eksctl
