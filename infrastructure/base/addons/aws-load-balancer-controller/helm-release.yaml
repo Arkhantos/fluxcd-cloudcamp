@@ -25,4 +25,6 @@ spec:
     serviceAccount:
       create: false
       name: aws-load-balancer-controller
+      annotations:
+        eks.amazonaws.com/role-arn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRole2
     clusterName: vcc-eksctl
