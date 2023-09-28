@@ -23,6 +23,8 @@ spec:
   values:
     # values replaced with values on ConfigMap external-config-data
     serviceAccount:
+      create: false
+      name: aws-load-balancer-controller
       annotations:
         eks.amazonaws.com/role-arn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRole
     clusterName: vcc-eksctl
