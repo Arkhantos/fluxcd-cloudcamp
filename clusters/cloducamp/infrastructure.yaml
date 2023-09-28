@@ -12,7 +12,7 @@ spec:
   path: ./infrastructure/base
   prune: true
   wait: true
-  timeout: 5m
+  timeout: 10m
   dependsOn:
     - name: external-config-data
   postBuild:
