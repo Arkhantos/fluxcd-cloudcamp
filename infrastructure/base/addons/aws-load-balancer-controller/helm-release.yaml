@@ -11,7 +11,7 @@ spec:
   chart:
     spec:
       chart: aws-load-balancer-controller
-      version: 1.4.1
+      #version: 2.3.0
       sourceRef:
         kind: HelmRepository
         name: eks-charts
@@ -24,7 +24,7 @@ spec:
       retries: 3
   values:
     # values replaced with values on ConfigMap external-config-data
-    serviceAccount:
-      annotations:
-        eks.amazonaws.com/role-arn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRole2
+    #serviceAccount:
+    #  annotations:
+    #    eks.amazonaws.com/role-arn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRole2
     clusterName: vcc-eksctl

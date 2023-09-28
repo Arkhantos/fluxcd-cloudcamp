@@ -5,6 +5,9 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
+  serviceAccountName: kustomize-controller
+  dependsOn:
+    - name: infrastructure
   path: ./apps/demo
   prune: true
   sourceRef:
