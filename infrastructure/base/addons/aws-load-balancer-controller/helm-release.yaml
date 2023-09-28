@@ -24,5 +24,5 @@ spec:
     # values replaced with values on ConfigMap external-config-data
     serviceAccount:
       annotations:
-        eks.amazonaws.com/role-arn: ${awsLoadBalancerControllerIamRoleArn}
-    clusterName: ${clusterName}
+        eks.amazonaws.com/role-arn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRole2
+    clusterName: vcc-eksctl
