@@ -26,5 +26,6 @@ spec:
       create: false
       name: aws-load-balancer-controller
       annotations:
+        service.beta.kubernetes.io/aws-load-balancer-name: apps-ingress-alb-jaba
         eks.amazonaws.com/role-arn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRole2
     clusterName: cloudcamp-eksctl-jaba
