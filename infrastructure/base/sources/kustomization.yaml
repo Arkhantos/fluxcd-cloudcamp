@@ -6,3 +6,4 @@ resources:
 - nginx-ingress-controller.yaml
 - prometheus.yaml
 - flagger.yaml
+- cert-manager.yaml
