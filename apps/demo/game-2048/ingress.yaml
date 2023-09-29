@@ -36,7 +36,8 @@ spec:
     - game2048.monitoring.devopstech.net
     secretName: gam2048-monitoring-devopstech-net-key-pair
   rules:
-  - http:
+  - host: game2048.monitoring.devopstech.net
+    http:
       paths:
       - path: /
         pathType: Prefix
