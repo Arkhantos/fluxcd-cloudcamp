@@ -30,11 +30,11 @@ metadata:
     cert-manager.io/issuer: letsencrypt-http01-prod
     service.beta.kubernetes.io/aws-load-balancer-name: apps-ingress-jaba
 spec:
-  ingressClassName: nginx
+  ingressClassName: external-nginx
   tls:
   - hosts:
     - game2048.monitoring.devopstech.net
-    secretName: gam2048-monitoring-devopstech-net-key-pair
+    secretName: game2048-monitoring-devopstech-net-key-pair
   rules:
   - host: game2048.monitoring.devopstech.net
     http:
