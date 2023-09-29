@@ -13,4 +13,4 @@ ssh-keygen
 
 Installar FluxCD en el Cluster
 
-flux bootstrap git --url=ssh://git@github.com/Arkhantos/fluxcd-cloudcamp --branch=main --private-key-file=/mnt/shared/_CloudCamp-k8s/key-flux --path=clusters/cloducamp --context=vcc-eksctl.us-east-1.eksctl.io
+flux bootstrap git --url=ssh://git@github.com/Arkhantos/fluxcd-cloudcamp --branch=main --private-key-file=/mnt/shared/_CloudCamp-k8s/key-flux --path=clusters/cloducamp --context=jorge.bastos@cloudcamp-eksctl-jaba.us-east-1.eksctl.io 
