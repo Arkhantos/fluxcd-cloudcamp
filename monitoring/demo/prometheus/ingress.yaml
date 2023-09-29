@@ -5,8 +5,13 @@ metadata:
   namespace: monitoring
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-name: monitoring-ingress-jaba
+    cert-manager.io/issuer: letsencrypt-http01-prod
 spec:
-  ingressClassName: nginx
+  ingressClassName: external-nginx
+  tls:
+  - hosts:
+    - grafanav1.monitoring.devopstech.net
+    secretName: grafanav1-monitoring-devopstech-net-key-pair
   rules:
   - host: grafanav1.monitoring.devopstech.net
     http:

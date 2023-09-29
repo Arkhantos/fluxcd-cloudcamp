@@ -2,6 +2,7 @@ apiVersion: v1
 data:
   # AWS Load Balancer Controller configuration values - substitute with your resource ids
   awsLoadBalancerControllerIamRoleArn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRoleFlux
+  awsCertManagerIamRoleArn: arn:aws:iam::628924030472:role/cert-manager-acme
   clusterName: cloudcamp-eksctl-jaba
 kind: ConfigMap
 metadata:
