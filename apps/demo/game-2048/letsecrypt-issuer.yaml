@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
-  name: letsencrypt-http01-prod
+  name: letsencrypt-http01-prod-app
   namespace: game-2048
 spec:
   acme:

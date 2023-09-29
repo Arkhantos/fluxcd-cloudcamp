@@ -27,7 +27,7 @@ metadata:
   namespace: game-2048
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    cert-manager.io/issuer: letsencrypt-http01-prod
+    cert-manager.io/issuer: letsencrypt-http01-prod-app
     service.beta.kubernetes.io/aws-load-balancer-name: apps-ingress-jaba
 spec:
   ingressClassName: external-nginx
