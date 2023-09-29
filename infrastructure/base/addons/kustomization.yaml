@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
 - aws-load-balancer-controller
 - metrics-server
-- nginx-ingress-controller
+#- nginx-ingress-controller
 - kube-prometheus-stack
