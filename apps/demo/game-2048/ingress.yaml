@@ -27,6 +27,7 @@ metadata:
   namespace: game-2048
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    service.beta.kubernetes.io/aws-load-balancer-name: apps-ingress-jaba
 spec:
   ingressClassName: nginx
   rules:
