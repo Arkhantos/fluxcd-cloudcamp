@@ -26,5 +26,5 @@ spec:
       create: false
       name: aws-load-balancer-controller
       annotations:
-        eks.amazonaws.com/role-arn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRoleFlux
-    clusterName: cloudcamp-eksctl-jaba
+        eks.amazonaws.com/role-arn: ${awsLoadBalancerControllerIamRoleArn}
+    clusterName: ${clusterName}
