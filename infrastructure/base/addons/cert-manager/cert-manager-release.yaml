@@ -28,5 +28,7 @@ spec:
         enabled: true
         namespace: cert-manager
         prometheusInstance: kube-prometheus-stack
+        labels:
+          release: kube-prometheus-stack
 
 
