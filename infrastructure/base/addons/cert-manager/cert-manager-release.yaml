@@ -26,6 +26,7 @@ spec:
       enabled: true
       servicemonitor:
         enabled: true
+        namespace: monitoring
         prometheusInstance: kube-prometheus-stack
 
 
