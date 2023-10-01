@@ -12,9 +12,6 @@ spec:
     crds: CreateReplace
   upgrade:
     crds: CreateReplace
-  # dependsOn:
-  # - name: istio-base
-  #   namespace: istio-system
   chart:
     spec:
       chart: istiod
