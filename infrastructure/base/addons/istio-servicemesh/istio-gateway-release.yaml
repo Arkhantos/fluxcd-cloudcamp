@@ -2,9 +2,16 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: istio-ingress
-  namespace: istio-ingress
+  namespace: flux-system
 spec:
+  releaseName: istio-ingress
+  serviceAccountName: helm-controller
+  targetNamespace: istio-ingress
   interval: 5m
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
   dependsOn:
   - name: istio-base
     namespace: istio-system
@@ -13,8 +20,9 @@ spec:
   chart:
     spec:
       chart: gateway
+      version: 1.19.0
       sourceRef:
         kind: HelmRepository
         name: istio-charts
-        namespace: istio-system
+        namespace: flux-system
       interval: 1m
