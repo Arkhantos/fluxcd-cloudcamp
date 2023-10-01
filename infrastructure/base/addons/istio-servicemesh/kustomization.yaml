@@ -5,4 +5,4 @@ resources:
 #- istio-gateway-release.yaml
 #- istio-ingress-ns.yaml
 - istio-system-ns.yaml
-#- istiod-release.yaml
+- istiod-release.yaml
