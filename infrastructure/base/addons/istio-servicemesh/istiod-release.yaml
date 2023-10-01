@@ -14,7 +14,7 @@ spec:
     crds: CreateReplace
   dependsOn:
   - name: istio-base
-    namespace: flux-system
+    namespace: istio-system
   chart:
     spec:
       chart: istiod
