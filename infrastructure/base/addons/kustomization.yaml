@@ -6,4 +6,4 @@ resources:
 - nginx-ingress-controller
 - kube-prometheus-stack
 - cert-manager
-#- istio-servicemesh
+- istio-servicemesh
