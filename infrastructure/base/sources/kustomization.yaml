@@ -9,3 +9,4 @@ resources:
 - cert-manager.yaml
 - istio.yaml
 - aws-ebs-csi-driver.yaml
+- istio-operator.yaml
