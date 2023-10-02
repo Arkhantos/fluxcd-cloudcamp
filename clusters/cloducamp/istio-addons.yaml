@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 10m0s
   serviceAccountName: kustomize-controller
-  path: ./infrastructure/base/addons/istio-addons
+  path: ./infrastructure/extensions
   prune: true
   sourceRef:
     kind: GitRepository

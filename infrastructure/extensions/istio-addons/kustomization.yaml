@@ -6,4 +6,4 @@ resources:
 - kiali.yaml
 - loki.yaml
 - prometheus.yaml
-- extras
+- ../extras
