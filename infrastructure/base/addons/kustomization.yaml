@@ -6,5 +6,4 @@ resources:
 - nginx-ingress-controller
 - kube-prometheus-stack
 - cert-manager
-- istio-servicemesh
 - aws_csi_driver

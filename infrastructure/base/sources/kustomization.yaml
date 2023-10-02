@@ -7,5 +7,4 @@ resources:
 - prometheus.yaml
 - flagger.yaml
 - cert-manager.yaml
-- istio.yaml
 - aws-ebs-csi-driver.yaml
