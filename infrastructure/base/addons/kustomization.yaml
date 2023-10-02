@@ -7,4 +7,3 @@ resources:
 - kube-prometheus-stack
 - cert-manager
 - istio-servicemesh
-- istio-addons
