@@ -3,6 +3,7 @@ data:
   # AWS Load Balancer Controller configuration values - substitute with your resource ids
   awsLoadBalancerControllerIamRoleArn: arn:aws:iam::628924030472:role/AmazonEKSLoadBalancerControllerRoleFlux
   awsCertManagerIamRoleArn: arn:aws:iam::628924030472:role/cert-manager-acme
+  awsCSIDriverIamRoleArn: arn:aws:iam::628924030472:role/AmazonEKS_EBS_CSI_DriverRoleFlux
   clusterName: cloudcamp-eksctl-jaba
 kind: ConfigMap
 metadata:
