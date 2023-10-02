@@ -1,8 +1,10 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
 metadata:
   name: istio-operator-charts
   namespace: flux-system
 spec:
-  interval: 1m
-  url: https://github.com/istio/istio/tree/master/manifests/charts/istio-operator
+  interval: 5m0s
+  url: https://github.com/istio/istio/tree/master/manifests/charts
+  ref:
+    branch: master
