@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: aws-ebs-csi-driver
-  serviceAccountName: ebs-csi-controller-irsa
+  serviceAccountName: helm-controller
   targetNamespace: kube-system
   chart:
     spec:
@@ -22,14 +22,9 @@ spec:
     crds: CreateReplace
   values:
     # values replaced with values on ConfigMap external-config-data
-    serviceAccount:
-      controller:
+    controller:
+      serviceAccount:
         create: false
-        name: ebs-csi-controller-irsa
-      snapshot:
-        create: false
-        name: ebs-csi-controller-irsa
-    enableVolumeScheduling: true
-    enableVolumeSnapshot: true
+        name: ebs-csi-controller-sa
 
 
