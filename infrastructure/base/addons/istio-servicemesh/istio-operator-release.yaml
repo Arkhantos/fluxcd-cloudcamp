@@ -12,6 +12,10 @@ spec:
     crds: CreateReplace
   upgrade:
     crds: CreateReplace
+  dependsOn:
+  - name: istio-base
+  - name: istio-ingress
+    #namespace: istio-system
   chart:
     spec:
       chart: ./manifests/charts/istio-operator
