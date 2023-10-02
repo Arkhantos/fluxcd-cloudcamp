@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: aws-ebs-csi-driver
-  serviceAccountName: helm-controller
+  serviceAccountName: ebs-csi-controller-irsa
   targetNamespace: kube-system
   chart:
     spec:
