@@ -24,3 +24,4 @@ spec:
   values:
     labels:
       istio: ingressgateway
+      app: istio-ingressgateway
