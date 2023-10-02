@@ -6,8 +6,4 @@ resources:
 - kiali.yaml
 - loki.yaml
 - prometheus.yaml
-- ./extras/prometheus_vm_tls.yaml
-- ./extras/prometheus_vm.yaml
-- ./extras/prometheus-operator.yaml
-- ./extras/skywalking.yaml
-- ./extras/zipkin.yaml
+- extras
