@@ -17,7 +17,7 @@ spec:
       chart: ./manifests/charts/istio-operator
       version: 1.19.0
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: istio-operator-charts
         namespace: flux-system
       interval: 1m
