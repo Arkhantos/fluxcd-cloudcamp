@@ -1,0 +1,24 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: api
+  namespace: production
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - test.monitoring.devopstech.net
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    hosts:
+    - test.monitoring.devopstech.net
+#    tls:
+#      credentialName: api-devopsbyexample-com-crt
+#      mode: SIMPLE
