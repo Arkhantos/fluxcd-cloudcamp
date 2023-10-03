@@ -6,4 +6,3 @@ resources:
 - istio-ingress-ns.yaml
 - istio-system-ns.yaml
 - istiod-release.yaml
-#- istio-operator-release.yaml
