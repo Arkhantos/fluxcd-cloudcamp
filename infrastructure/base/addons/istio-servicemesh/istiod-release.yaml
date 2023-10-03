@@ -10,11 +10,14 @@ spec:
   interval: 5m
   install:
     crds: CreateReplace
+    remediation:
+      retries: 3
   upgrade:
     crds: CreateReplace
-  # dependsOn:
-  # - name: istio-base
-  #   namespace: istio-system
+    remediation:
+      retries: 3
+  dependsOn:
+  - name: istio-base
   chart:
     spec:
       chart: istiod
@@ -24,3 +27,11 @@ spec:
         name: istio-charts
         namespace: flux-system
       interval: 1m
+  values:
+    telemetry:
+      enabled: true
+    global:
+      istioNamespace: istio-system
+    meshConfig:
+      ingressService: istio-gateway
+      ingressSelector: gateway
