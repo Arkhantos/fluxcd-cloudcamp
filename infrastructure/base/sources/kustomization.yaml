@@ -8,3 +8,4 @@ resources:
 - flagger.yaml
 - cert-manager.yaml
 - aws-ebs-csi-driver.yaml
+- istio.yaml

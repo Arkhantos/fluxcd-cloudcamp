@@ -7,3 +7,4 @@ resources:
 - kube-prometheus-stack
 - cert-manager
 - aws_csi_driver
+- istio-servicemesh
