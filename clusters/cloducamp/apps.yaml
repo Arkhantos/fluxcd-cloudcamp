@@ -4,12 +4,13 @@ metadata:
   name: apps
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 5m0s
   serviceAccountName: kustomize-controller
   dependsOn:
-    - name: infrastructure
+  - name: infrastructure
   path: ./apps/demo
   prune: true
+  wait: true
   sourceRef:
     kind: GitRepository
     name: flux-system
