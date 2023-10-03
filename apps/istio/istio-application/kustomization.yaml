@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - deploymentv1.yaml
-- deploymentv1.yaml
+- deploymentv2.yaml
 - myappservice.yaml
 - destinationrule.yaml
 - virtualservice.yaml
