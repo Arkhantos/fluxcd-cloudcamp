@@ -4,7 +4,7 @@ metadata:
   namespace: production
   name: istio-ingress-alb
   labels:
-    app: ingressgateway
+    istio: ingressgateway
   annotations:
     #kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
@@ -22,6 +22,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: istio-ingressgateway
+            name: ingressgateway
             port:
               number: 80
