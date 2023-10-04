@@ -8,6 +8,7 @@ resources:
 - 4.destinationrule.yaml
 - 5.virtualservice.yaml
 - 6.gateway.yaml
+- 7.cluster-issuer-prod.yaml
 - 7.cluster-issuer-staging.yaml
 - 8.certificate.yaml
 #- 9.ingress.yaml
