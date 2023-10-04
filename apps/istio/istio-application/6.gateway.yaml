@@ -13,12 +13,12 @@ spec:
       protocol: HTTP
     hosts:
     - test.monitoring.devopstech.net
-#  - port:
-#      number: 443
-#      name: https
-#      protocol: HTTPS
-#    hosts:
-#    - test.monitoring.devopstech.net
-#    tls:
-#      credentialName: api-devopsbyexample-com-crt
-#      mode: SIMPLE
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    hosts:
+    - test.monitoring.devopstech.net
+    tls:
+      credentialName: api-devopstech-net-crt
+      mode: SIMPLE

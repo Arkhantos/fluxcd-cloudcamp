@@ -1,10 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- namespace.yaml
-- deploymentv1.yaml
-- deploymentv2.yaml
-- myappservice.yaml
-- destinationrule.yaml
-- virtualservice.yaml
-- gateway.yaml
+- 0.namespace.yaml
+- 1.deploymentv1.yaml
+- 2.deploymentv2.yaml
+- 3.myappservice.yaml
+- 4.destinationrule.yaml
+- 5.virtualservice.yaml
+- 6.gateway.yaml
+- 7.cluster-issuer-staging.yaml
+- 8.certificate.yaml
+- 9.ingress.yaml
