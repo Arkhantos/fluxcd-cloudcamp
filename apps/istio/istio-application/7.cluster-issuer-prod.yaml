@@ -11,6 +11,7 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
-    - http01:
+    - selector: {}
+      http01:
         ingress:
           ingressClassName: istio
