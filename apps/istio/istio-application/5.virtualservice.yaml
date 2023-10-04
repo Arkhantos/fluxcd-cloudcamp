@@ -13,6 +13,14 @@ spec:
   - match:
     - uri:
         prefix: /
+      scheme:
+        exact: http
+    redirect:
+      scheme: https
+      redirectCode: 302
+  - match:
+    - uri:
+        prefix: /
     route:
     - destination:
         host: second-app

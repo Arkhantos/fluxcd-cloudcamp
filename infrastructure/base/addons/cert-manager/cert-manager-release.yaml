@@ -33,7 +33,7 @@ spec:
         prometheusInstance: kube-prometheus-stack
         labels:
           release: kube-prometheus-stack
-    extraArgs:
-    - --feature-gates=ExperimentalGatewayAPISupport=true
+    #extraArgs:
+#- --feature-gates=ExperimentalGatewayAPISupport=true
 
 

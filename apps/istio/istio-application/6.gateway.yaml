@@ -13,6 +13,8 @@ spec:
       protocol: HTTP
     hosts:
     - test.monitoring.devopstech.net
+    tls:
+      httpsRedirect: false
   - port:
       number: 443
       name: https
@@ -20,5 +22,5 @@ spec:
     hosts:
     - test.monitoring.devopstech.net
     tls:
-      credentialName: ingress-devopstech-net-cert
+      credentialName: devopstech-certificate-secret
       mode: SIMPLE

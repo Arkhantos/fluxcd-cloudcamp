@@ -1,15 +1,15 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: ingress-devopstech-net-cert
-  namespace: production
+  name: devopstech-certificate
+  namespace: istio-system
 spec:
-  secretName: ingress-devopstech-net-cert
+  secretName: devopstech-certificate-secret
   commonName: test.monitoring.devopstech.net
   dnsNames:
   - test.monitoring.devopstech.net
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-prod-cluster
     kind: ClusterIssuer
     group: cert-manager.io
 
