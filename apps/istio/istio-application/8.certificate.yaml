@@ -11,10 +11,5 @@ spec:
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-    #group: cert-manager.io
-  acme:
-    config:
-    - http01:
-        ingressClass: istio
-      domains:
-      - test.monitoring.devopstech.net
+    group: cert-manager.io
+
