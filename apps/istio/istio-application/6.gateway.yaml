@@ -3,8 +3,6 @@ kind: Gateway
 metadata:
   name: gatewayapi
   namespace: production
-  annotations:
-    cert-manager.io/issuer: prod-cluster-issuer
 spec:
   selector:
     istio: ingressgateway
