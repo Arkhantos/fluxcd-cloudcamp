@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: production
+  namespace: istio-ingress
   name: istio-ingress-alb
   labels:
     istio: ingressgateway
