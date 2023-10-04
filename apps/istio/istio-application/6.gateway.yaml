@@ -4,7 +4,7 @@ metadata:
   name: gatewayapi
   namespace: production
   annotations:
-    cert-manager.io/issuer: staging-cluster-issuer
+    cert-manager.io/issuer: prod-cluster-issuer
 spec:
   selector:
     istio: ingressgateway
@@ -22,5 +22,5 @@ spec:
     hosts:
     - test.monitoring.devopstech.net
     tls:
-      credentialName: test-monitoring-devopstech-net-crt
+      credentialName: ingress-devopstech-net-cert
       mode: SIMPLE
