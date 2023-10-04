@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: ingress-devopstech-net-cert
-  namespace: istio-ingress
+  namespace: production
 spec:
   secretName: ingress-devopstech-net-cert
   commonName: test.monitoring.devopstech.net
