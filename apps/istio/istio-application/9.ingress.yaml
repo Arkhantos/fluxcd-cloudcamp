@@ -6,9 +6,9 @@ metadata:
   labels:
     app: ingressgateway
   annotations:
-    kubernetes.io/ingress.class: alb
+    #kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/load-balancer-name: alb-istio-ingress-jaba
+    #alb.ingress.kubernetes.io/load-balancer-name: alb-istio-ingress-jaba
     #kubernetes.io/role/elb: 1
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: '443'
