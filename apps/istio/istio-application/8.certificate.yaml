@@ -10,6 +10,6 @@ spec:
   - test.monitoring.devopstech.net
   issuerRef:
     name: letsencrypt-prod
-    kind: ClusterIssuer
+    kind: Issuer
     group: cert-manager.io
 
