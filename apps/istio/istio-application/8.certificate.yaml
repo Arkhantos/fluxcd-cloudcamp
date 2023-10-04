@@ -3,8 +3,8 @@ kind: Certificate
 metadata:
   name: devopstech-certificate
   namespace: istio-ingress
-  annotations:
-    cert-manager.io/issue-temporary-certificate: "true"
+  #annotations:
+#cert-manager.io/issue-temporary-certificate: "true"
 spec:
   secretName: devopstech-certificate-secret
   commonName: test.monitoring.devopstech.net
@@ -13,5 +13,5 @@ spec:
   issuerRef:
     name: letsencrypt-prod-cluster
     kind: ClusterIssuer
-    group: cert-manager.io
+    #group: cert-manager.io
 

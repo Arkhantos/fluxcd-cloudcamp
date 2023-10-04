@@ -14,13 +14,14 @@ spec:
     hosts:
     - test.monitoring.devopstech.net
     tls:
-      httpsRedirect: true
+      credentialName: devopstech-certificate-secret
+      mode: SIMPLE
   - port:
       number: 443
       name: https
       protocol: HTTPS
     hosts:
-    - test.monitoring.devopstech.net
+    - test.monitoring.devopstech.com
     tls:
-      credentialName: devopstech-certificate-secret
+      credentialName: devopstech-certificate-secret2
       mode: SIMPLE

@@ -5,8 +5,8 @@ resources:
 - 1.deploymentv1.yaml
 - 2.deploymentv2.yaml
 - 3.myappservice.yaml
-- 4.destinationrule.yaml
-- 5.virtualservice.yaml
+#- 4.destinationrule.yaml
+#- 5.virtualservice.yaml
 - 6.gateway.yaml
 - 7.cluster-issuer-prod.yaml
 - 7.cluster-issuer-staging.yaml
