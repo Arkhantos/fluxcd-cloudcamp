@@ -24,9 +24,9 @@ spec:
   values:
     annotations:
       service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
-      kubernetes.io/role/elb: 1
-      #alb.ingress.kubernetes.io/scheme: internet-facing
-    #service.beta.kubernetes.io/aws-load-balancer-internal: "false"
+      service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
+      #service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+    #kubernetes.io/role/elb: 1
     labels:
       istio: ingressgateway
       app: ingressgateway
