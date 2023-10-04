@@ -13,7 +13,8 @@ spec:
       protocol: HTTP
     hosts:
     - test.monitoring.devopstech.net
-    #tls:      #httpsRedirect: true
+    tls:
+      httpsRedirect: false
   - port:
       number: 443
       name: https

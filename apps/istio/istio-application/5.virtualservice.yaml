@@ -13,9 +13,17 @@ spec:
   - match:
     - uri:
         prefix: /
+      scheme:
+        exact: http
+    redirect:
+      scheme: https
+      redirectCode: 302
+  - match:
+    - uri:
+        prefix: /
     route:
     - destination:
-        host: myapp.default.svc.cluster.local
+        host: second-app
         subset: v1
       weight: 10
     - destination:
