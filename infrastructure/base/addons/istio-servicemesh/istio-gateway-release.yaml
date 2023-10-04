@@ -22,8 +22,10 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
-    service:
-      type: NodePort
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+      service.beta.kubernetes.io/aws-load-balancer-internal: "false"
+      kubernetes.io/role/elb: 1
     labels:
       istio: ingressgateway
       app: ingressgateway
