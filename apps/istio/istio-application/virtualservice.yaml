@@ -8,7 +8,7 @@ spec:
   - test.monitoring.devopstech.net
   - second-app
   gateways:
-  - api
+  - gatewayapi
   http:
   - match:
     - uri:
