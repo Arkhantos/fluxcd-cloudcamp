@@ -8,6 +8,6 @@ spec:
   dnsNames:
   - test.monitoring.devopstech.net
   issuerRef:
-    name: staging-issuer
-    kind: Issuer
+    name: staging-cluster-issuer
+    kind: ClusterIssuer
     group: cert-manager.io
