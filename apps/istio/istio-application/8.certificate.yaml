@@ -1,10 +1,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: api-devopstech-net
+  name: test-monitoring-devopstech-net
   namespace: istio-ingress
 spec:
-  secretName: api-devopstech-net-crt
+  secretName: test-monitoring-devopstech-net-crt
   dnsNames:
   - test.monitoring.devopstech.net
   issuerRef:

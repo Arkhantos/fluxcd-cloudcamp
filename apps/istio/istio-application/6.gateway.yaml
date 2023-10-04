@@ -22,5 +22,5 @@ spec:
     hosts:
     - test.monitoring.devopstech.net
     tls:
-      credentialName: api-devopstech-net-crt
+      credentialName: test-monitoring-devopstech-net-crt
       mode: SIMPLE
