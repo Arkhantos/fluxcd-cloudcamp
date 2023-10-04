@@ -22,6 +22,8 @@ spec:
         namespace: flux-system
       interval: 1m
   values:
+    service:
+      type: NodePort
     labels:
       istio: ingressgateway
       app: ingressgateway
