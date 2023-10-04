@@ -12,11 +12,6 @@ spec:
   http:
   - match:
     - uri:
-        prefix: /.well-known
-    route:
-      destination: cm-acme-http-solver-tjk77
-  - match:
-    - uri:
         prefix: /
     route:
     - destination:
